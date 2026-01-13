@@ -438,7 +438,7 @@ def muon(
     adam_b2: jax.typing.ArrayLike = 0.999,
     adam_eps_root: jax.typing.ArrayLike = 0.0,
     adam_weight_decay: jax.typing.ArrayLike = 0.0,
-    learning_rate_adam: base.ScalarOrSchedule,
+    learning_rate_adam: base.ScalarOrSchedule | None = None,
     muon_weight_dimension_numbers: WeightDimNumOrFn | None = None,
     consistent_rms: jax.typing.ArrayLike | None = None,
 ) -> base.GradientTransformation:
